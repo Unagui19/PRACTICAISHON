@@ -1,58 +1,79 @@
 ﻿using Personas;
 
-//--------------------COLECCIONES
+// ENUM
 
-List<int> lista= new List<int>(); //inicializo lista
-Dictionary<int,string> diccionario=new Dictionary<int, string>();//inicializo diccionario 
+mes mesActual = mes.Enero;
+Console.WriteLine(mesActual);//aqui me devuelve el string 
+Console.WriteLine((int)mesActual); //aqui en numero
 
-Console.WriteLine("Lista: ");
-mostrarLista(lista);
-Console.WriteLine("Diccionario:");
-mostrarDiccionario(diccionario);
-
-//agregar elementos
-lista.Add(3);
-lista.Add(5);
-Console.WriteLine("Lista: "+lista+"\n");
-Console.WriteLine("Lista: ");
-mostrarLista(lista);
-Console.WriteLine("Lista: ");
-mostrarLista(lista);
-diccionario.Add(1,"a");
-diccionario.Add(2,"b");
-Console.WriteLine("Diccionario: ");
-mostrarDiccionario(diccionario);
-
-//quitar elementos
-lista.Remove(3);
-Console.WriteLine("Lista: ");
-mostrarLista(lista);
-diccionario.Remove(1);
-Console.WriteLine("Diccionario: ");
-mostrarDiccionario(diccionario);
-
-//concatenar elementos
-lista.Concat(lista);//solo funciona en strings
-Console.WriteLine("Lista: ");
-mostrarLista(lista);
+mes miMes = mes.Febrero | mes.Febrero;
+Console.WriteLine((int)miMes);//me devuelve la suma de los enum mencionados
 
 
-
-void mostrarLista (List<int> lista)
+[Flags]
+enum mes
 {
-    foreach (var item in lista)
-    {
-        Console.WriteLine(item);
-    }
+    Enero = 1,
+    Febrero = 2,
+    Marzo =3,
+    Abril = 4,
+    Mayo = 5,
+    Junio = 6    
 }
 
-void mostrarDiccionario (Dictionary<int,string> diccionario)
-{
-    foreach (var item in diccionario)
-    {
-        Console.WriteLine(item);
-    }
-}
+// //--------------------COLECCIONES
+
+// List<int> lista= new List<int>(); //inicializo lista
+// Dictionary<int,string> diccionario=new Dictionary<int, string>();//inicializo diccionario 
+
+// Console.WriteLine("Lista: ");
+// mostrarLista(lista);
+// Console.WriteLine("Diccionario:");
+// mostrarDiccionario(diccionario);
+
+// //agregar elementos
+// lista.Add(3);
+// lista.Add(5);
+// Console.WriteLine("Lista: "+lista+"\n");
+// Console.WriteLine("Lista: ");
+// mostrarLista(lista);
+// Console.WriteLine("Lista: ");
+// mostrarLista(lista);
+// diccionario.Add(1,"a");
+// diccionario.Add(2,"b");
+// Console.WriteLine("Diccionario: ");
+// mostrarDiccionario(diccionario);
+
+// //quitar elementos
+// lista.Remove(3);
+// Console.WriteLine("Lista: ");
+// mostrarLista(lista);
+// diccionario.Remove(1);
+// Console.WriteLine("Diccionario: ");
+// mostrarDiccionario(diccionario);
+
+// //concatenar elementos
+// lista.Concat(lista);//solo funciona en strings
+// Console.WriteLine("Lista: ");
+// mostrarLista(lista);
+
+
+
+// void mostrarLista (List<int> lista)
+// {
+//     foreach (var item in lista)
+//     {
+//         Console.WriteLine(item);
+//     }
+// }
+
+// void mostrarDiccionario (Dictionary<int,string> diccionario)
+// {
+//     foreach (var item in diccionario)
+//     {
+//         Console.WriteLine(item);
+//     }
+// }
 
 // //ARREGLOS Y MATRICES
 // int [] arreglo1=new int[3];
