@@ -2,11 +2,19 @@
 
 var Franco = new Personal();
 
-Franco.nombre = "Franco";
-Franco.altura =12;
+Franco.Nombre = "Franco";
+Franco.Altura =172;
+Franco.Nacionalidad= "Argentina";
+Franco.Profesión ="Estudiante de Ingeniería en Informática";
+Franco.FechaNac=new DateTime(1996, 12, 19);
+Franco.calcularEdad(Franco.FechaNac);
 
-Console.WriteLine("La altura de "+ Franco.nombre +" es :"+ Franco.altura);
-
+Console.WriteLine(Franco.Nombre);
+Console.WriteLine(Franco.Altura);
+Console.WriteLine(Franco.Nacionalidad);
+Console.WriteLine(Franco.Profesión);
+Console.WriteLine(Franco.FechaNac);
+Console.WriteLine(Franco.Edad);
 
 
 
