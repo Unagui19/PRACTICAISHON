@@ -1,5 +1,11 @@
 ﻿using Personas;
 
+var Franco = new Personal();
+
+Franco.nombre = "Franco";
+Franco.altura =12;
+
+Console.WriteLine("La altura de "+ Franco.nombre +" es :"+ Franco.altura);
 
 
 

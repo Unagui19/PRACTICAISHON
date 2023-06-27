@@ -1,11 +1,12 @@
 namespace Personas
 {
-    public class Persona
+    public class Personal
     {
-       int altura;
-       int edad;
-       DateTime fechaNac;
-       string? profesión;
-       string? nacionalidad;
+        public string? nombre;
+        public int altura;
+        int edad;
+        DateTime fechaNac;
+        string? profesión;
+        string? nacionalidad;
     }
 }
