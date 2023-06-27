@@ -1,43 +1,25 @@
 ﻿using Personas;
 
-var Franco = new Personal();
+int [] arreglo1=new int[3];
+int [] arreglo2={1,2,3};
 
-Franco.Nombre = "Franco";
-Franco.Altura =172;
-Franco.Nacionalidad= "Argentina";
-Franco.Profesión ="Estudiante de Ingeniería en Informática";
-Franco.FechaNac=new DateTime(1996, 12, 19);
-Franco.calcularEdad(Franco.FechaNac);
+int arre;
+//arreglo
+arreglo1[0]=1;
+arre=arreglo1[0];
+Console.WriteLine(arre);
 
-Console.WriteLine(Franco.Nombre);
-Console.WriteLine(Franco.Altura);
-Console.WriteLine(Franco.Nacionalidad);
-Console.WriteLine(Franco.Profesión);
-Console.WriteLine(Franco.FechaNac);
-Console.WriteLine(Franco.Edad);
+Personal [] arreglo3 = new Personal[3];
 
-
-
+foreach (var pj in arreglo3)
+{
+    var personita =new Personal();
+    personita.Altura= new Random().Next(140,203);
+}
 
 
-// string? hola="hola";
-// var saludar = new saludando(hola);
-// Console.WriteLine(saludar.Saludo);
-// saludar.Saludo="chau";
-// Console.WriteLine(hola);
-// hola=saludar.Saludo;
-// Console.WriteLine(hola);
-
-// class saludando
-// {
-//     private string? saludo;
-//     public string? Saludo { get => saludo; set => saludo = value; }
-//     public saludando(string? saludo)
-//     {
-//         this.Saludo = saludo;
-//     }
-
-// }
-
+//matrices
+int [,] matriz1 = new int[2,2];
+string [,] matriz2 = {{"a","b","c"},{"d","e","f"}};
 
 
