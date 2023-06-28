@@ -74,9 +74,32 @@
             }
             
             // Mueve un archivo de una ubicación a otra
-            File.Move(NuevoArchivo, NuevoArchivoCopia);
+            // File.Move(NuevoArchivo, NuevoArchivoCopia);
 
-            //Lee un ar
+            //Lee un archivo , libreria StreamReader.
+
+            string RutaArchivo = NuevoArchivoCopia;
+            if (File.Exists(RutaArchivo))
+            {
+                FileStream Fstream = new FileStream(RutaArchivo, FileMode.Open);
+                StreamReader Streamr = new StreamReader(Fstream);
+
+                string linea;
+                do 
+                {
+                    linea = Streamr.ReadLine(); // lee una linea completa
+                    Console.WriteLine(linea);
+                    
+                } while (linea != null);
+
+                
+                Streamr.Close();
+
+            }
+            else
+            {
+                Console.WriteLine("Archivo no encontrado : {0}",RutaArchivo);
+            }
 
 
 
