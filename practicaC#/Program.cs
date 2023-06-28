@@ -89,7 +89,7 @@
                 {
                     linea = Streamr.ReadLine(); // lee una linea completa
                     Console.WriteLine(linea);
-                    
+
                 } while (linea != null);
 
                 
@@ -101,6 +101,32 @@
                 Console.WriteLine("Archivo no encontrado : {0}",RutaArchivo);
             }
 
+
+
+            //ahora vamos a escribir en el archivo de texto
+            string RutaArchivo2 = @"D:\pruebas\prueba2.txt";
+            if (!File.Exists(RutaArchivo2))
+            {
+                File.Create(NuevoArchivo);// crea el archivo en la ruta especificada 
+            }
+            
+
+            string texto = File.ReadAllText(RutaArchivo); //lee todo el texto del archivo
+            Console.WriteLine("Contenido: {0}", texto);
+
+            List<string> LineasDelArchivo = File.ReadAllLines(RutaArchivo).ToList();
+
+            foreach (string Linea in LineasDelArchivo)
+            {
+                Console.WriteLine("\t" + Linea);
+            }   
+
+
+            string[] MisLineas = { "Prueba 1 ", "Prueba 2" };
+            File.WriteAllLines(RutaArchivo, MisLineas);
+            
+        
+            
 
 
 
