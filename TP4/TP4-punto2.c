@@ -16,7 +16,7 @@ struct Nodo
     Tarea T;
     struct Nodo *Siguiente;
 } typedef Nodo;
-
+//lala
 Nodo* crearListaVacia();
 Nodo* crearTareas(int id);
 void insertarTareas(Nodo **start,int id);
