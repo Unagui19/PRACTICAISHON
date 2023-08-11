@@ -53,7 +53,7 @@ int main()
     {
         id++;
         insertarTareas(&tareasPendientes, id);
-        printf("\nDesea ingresar una nueva tarea?( 1: SI    2:NO) \t");
+        printf("\nDesea ingresar una nueva tarea??( 1: SI    2:NO) \t");
         scanf("%d",&seguir);
         fflush(stdin);
         while (seguir!=1 && seguir!=2)
